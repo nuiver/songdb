@@ -1,4 +1,5 @@
 Artist.delete_all
+Song.delete_all
 
 beatles = Artist.create(name: "The Beatles")
 stones = Artist.create(name: "Rolling Stones")
