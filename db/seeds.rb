@@ -1,9 +1,9 @@
-Artist.delete_all
 Song.delete_all
+Artist.delete_all
 
-beatles = Artist.create(name: "The Beatles")
-stones = Artist.create(name: "Rolling Stones")
-police = Artist.create(name: "The Police")
+beatles = Artist.create(name: "The Beatles", image: open(http://i142.photobucket.com/albums/r96/thisdayinmusic/Beatles-White-Album-Portraits.jpg) )
+stones = Artist.create(name: "Rolling Stones", image: open(https://s-media-cache-ak0.pinimg.com/564x/57/d6/bb/57d6bbca5e9b803a691a271df9616781.jpg) )
+police = Artist.create(name: "The Police", image: open(http://matilda.express.ge/ZoneG/20/performer//The%20Police/.photo/1304__police_l.jpg) )
 
 Song.create(title: "Help", artist: beatles)
 Song.create(title: "Yesterday", artist: beatles)

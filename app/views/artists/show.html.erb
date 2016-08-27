@@ -1,4 +1,10 @@
 <p id="notice"><%= notice %></p>
 
+<h1><%= @artist.name %></h1>
+
+<div>
+  <%= image_tag(@artist.image.thumbnail.url) %>
+</div>
+
 <%= link_to 'Edit', edit_artist_path(@artist) %> |
 <%= link_to 'Back', artists_path %>
