@@ -1,1 +1,2 @@
 <div class="song song-<%= song.id %>"><%= song.title %></div>
+<div class='remove-but'><%= link_to "Remove", "javascript:void(0);", id: "remove-#{song.id}" %></div>
