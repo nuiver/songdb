@@ -10,6 +10,7 @@ class ArtistsController < ApplicationController
   # GET /artists/1
   # GET /artists/1.json
   def show
+    @song = Song.new
   end
 
   # GET /artists/new
@@ -65,6 +66,7 @@ class ArtistsController < ApplicationController
     # Use callbacks to share common setup or constraints between actions.
     def set_artist
       @artist = Artist.find(params[:id])
+      @songs = @artist.songs
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
