@@ -1,2 +1,5 @@
-<div class="song" id="song-<%= song.id %>"><%= song.title %><div class="del_button"><%= link_to "Delete", artist_song_path(params[:artist_id],song.id), remote: true, method: :delete, data: { confirm: "Are you 100% sure you want to remove this iconic song?" } %>
+<div class="song" id="song-<%= song.id %>">
+  <%= song.title %>
+  <div class="del_button"><%= link_to "Delete", artist_song_path(params[:artist_id],song.id), remote: true, method: :delete, data: { confirm: "Are you 100% sure you want to remove this iconic song?" } %>
+  </div>
 </div>
