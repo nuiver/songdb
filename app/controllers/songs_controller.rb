@@ -15,6 +15,7 @@ class SongsController < ApplicationController
   # GET /songs/new
   def new
     @song = Song.new
+    @artist = Artist.find(params[:artist_id])
   end
 
   # GET /songs/1/edit
