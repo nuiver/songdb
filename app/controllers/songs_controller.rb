@@ -57,10 +57,11 @@ class SongsController < ApplicationController
   # DELETE /songs/1
   # DELETE /songs/1.json
   def destroy
-    @song.destroy
+    @deleted_song = @song.destroy
     respond_to do |format|
       format.html { redirect_to artist_songs_url(params[:artist_id]), notice: 'Song was successfully destroyed.' }
       format.json { head :no_content }
+      format.js {}
     end
   end
 
