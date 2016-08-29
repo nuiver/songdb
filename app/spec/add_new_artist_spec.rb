@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-describe 'Manage songs', type: :feature, js: true do
+feature 'Manage songs', js: true do
   scenario 'add a new artist' do
     #Point my browser towards the artist#new page
     visit new_artist_path
