@@ -3,7 +3,9 @@
 <h1><%= @artist.name %></h1>
 
 <div>
-  <%= image_tag(@artist.image.thumbnail.url) %>
+  <% if @artist.image.thumbnail.url %>
+    <%= image_tag(@artist.image.thumbnail.url) %>
+  <% end %>
 </div>
 <div class="songs_overview">
   <%= render @songs %>
