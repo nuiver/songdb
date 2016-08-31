@@ -1,0 +1,6 @@
+<div class="fp_artist_box">
+  <div class="fp_artist"><%= link_to artist.name, artist_songs_path(artist.id) %></div>
+  <% if artist.image.thumbnail.url %>
+    <div class="fp_thumbnail"><%= image_tag(artist.image.thumbnail.url, size: "66x66") %></div>
+  <% end %>
+</div>

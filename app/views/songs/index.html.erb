@@ -3,8 +3,12 @@
 <h1>Songs</h1>
 
 <div id="song-form" style="display:none;"></div>
-<%= link_to 'New Song', new_artist_song_path(params[:artist_id]), remote: true %>
+<%= link_to 'New Song', new_artist_song_path(params[:artist_id]), remote: true, :id => "newsong" %>
 
 <div id="songlist">
   <%= render @songs %>
+</div>
+<div>
+  <br />
+<%= link_to '[Back to artists]', artists_path %>
 </div>
