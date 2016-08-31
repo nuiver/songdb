@@ -7,6 +7,16 @@ class ArtistsController < ApplicationController
     @artists = Artist.all
   end
 
+  def alphabetical
+    @artists = Artist.order(:name)
+    render 'index'
+  end
+
+  def creationdate
+    @artists = Artist.order(:created_at)
+    render 'index'
+  end
+
   # GET /artists/1
   # GET /artists/1.json
   def show

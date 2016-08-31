@@ -2,14 +2,11 @@
 
 <h1>Artists</h1>
 
+<%= link_to "Sort alphabetical", artists_alphabetical_path() %>
+<%= link_to "Sort by creation date", artists_creationdate_path() %>
 
-<% @artists.each do |artist| %>
-  <div class="fp_artist_box">
-    <div class="fp_artist"><%= link_to artist.name, artist_songs_path(artist.id) %></div>
-    <div class="fp_thumbnail"><%= image_tag(artist.image.thumbnail.url, size: "66x66") %></div>
-  </div>
-<% end %>
-
-
+<div id='artists_overview'>
+  <%= render @artists %>
+</div>
 
 <%= link_to 'New Artist', new_artist_path %>
